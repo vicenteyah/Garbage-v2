@@ -1,0 +1,76 @@
+#wrapper{
+    position: relative;
+}
+.callbacks_nav{
+    position: absolute;
+    background: rgba(241, 237, 237, 0.514);
+    text-decoration: none;
+    color:rgba(241, 237, 237, 0.041);
+}
+
+
+
+.prev{
+    top: 45%;
+    left: 2%;
+    z-index:3;
+    clip-path: polygon(50% 0%, 34% 50%, 50% 100%, 0% 50%);
+    padding: 1%;
+}
+.next {
+    top: 45%;
+    right: 2%;
+    z-index: 3;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 65% 51%);
+    padding: 1%;
+}
+
+.content{
+    position: relative;
+}
+
+.caption{
+    position: absolute;
+    color:aliceblue;
+    top: 30%;
+    right: 25%;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+}
+
+.caption h1{
+    font-size: 3.5rem;
+    font-family: var(--text);
+}
+.caption h3{
+    font-family: var(--subtitle);
+    font-size: 2rem;
+}
+
+.caption a{
+    text-decoration: none;
+    font-family: var(--cardText);
+    color: var(--fontWhite);
+    width: 150px;
+    padding: 20px 10px 20px 10px;
+    background-color: var(--secondary);
+    border-radius: 5px;
+}
+
+.caption a:hover{
+    
+    background: var(--primary);
+    transform: scale(1);
+    transition: all .5s;
+}
+
+@media screen and (max-width:480px){
+    .slider-hidden{
+        display: none;
+    }
+}

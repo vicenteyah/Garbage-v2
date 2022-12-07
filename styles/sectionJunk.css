@@ -1,0 +1,97 @@
+.junk-removal{
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.junk-layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.junk-layout h1{
+    font-size: 2rem;
+    font-family: var(--title);
+}
+
+.junk-layout p {
+    font-size: 25px;
+    font-family: var(--cardTitle);
+}
+.junk-article{
+    margin-top: 3% ;
+    max-width: 350px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.junk-article:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+
+.junk-article img{
+    max-width: 350px;
+    height: 360px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.junk-description{
+    max-width: 300px;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.junk-description h1{
+    font-size: 2rem;
+    font-family: var(--title);
+    color: var(--fontWhite);
+    text-shadow: 1px 1px 20px #000;
+}
+.junk-description p{
+    font-size: 20px;
+    font-family: var(--footerPolicy);
+    color: var(--fontWhite);
+    text-shadow: 1px 1px 20px #000;
+}
+
+
+.junk-description a {
+    text-decoration: none;
+    font-family: var(--cardText);
+    color: var(--fontWhite);
+    width: 150px;
+    padding: 20px 10px 20px 10px;
+    background-color: var(--secondary);
+
+    border-radius: 5px;
+}
+.junk-description a:hover{
+    
+    background: var(--primary);
+    transform: scale(1);
+    transition: all .5s;
+}
+
+.junk-articles-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+@media screen and (max-width:480px){
+    .junk-articles-layout{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,87 @@
+/** initial configuration **/
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/** Main descrptions **/
+@font-face{
+    font-family: 'Roboto-Bold';
+    src:url('../fonts/Roboto/Roboto-Bold.ttf');
+}
+
+@font-face{
+    font-family: 'Roboto-Medium';
+    src:url('../fonts/Roboto/Roboto-Medium.ttf');
+}
+
+@font-face{
+    font-family: 'Roboto-Regular';
+    src:url('../fonts/Roboto/Roboto-Bold.ttf');
+}
+
+/** cards fonts**/
+@font-face{
+    font-family: 'Nunito-Regular';
+    src:url('../fonts/Nunito/Nunito-Regular.ttf');
+}
+
+@font-face{
+    font-family: 'Nunito-Medium';
+    src:url('../fonts/Nunito/Nunito-Medium.ttf');
+}
+
+@font-face{
+    font-family: 'Nunito-Light';
+    src:url('../fonts/Nunito/Nunito-Light.ttf');
+}
+
+
+/** Extra fonts**/
+@font-face{
+    font-family: 'Alexandria-Regular';
+    src:url('../fonts/Alexandria/Alexandria-Regular.ttf');
+}
+
+@font-face{
+    font-family: 'Alexandria-Medium';
+    src:url('../fonts/Alexandria/Alexandria-Medium.ttf');
+}
+
+
+:root{
+    /* Core app fonts*/
+    --title: 'Roboto-Bold';
+    --subtitle: 'Roboto-Medium';
+    --text: 'Roboto-Regular';
+
+    --footerItems: 'Nunito-Regular';
+    --footerTitles: 'Nunito-Medium';
+    --footerPolicy: 'Nunito-Light';
+
+    --cardTitle: 'Alexandria-Medium';
+    --cardText: 'Alexandria-Regular';
+
+    /** Colors**/
+    --primary: #024731;
+    --secondary: #93CE20;
+    --fontBlack: #000;
+    --fontWhite: #fff; 
+}
+
+.navbar,
+.footer,
+.section{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:480px){
+    .navbar,
+    .footer,
+    .section{
+        max-width: 480px;
+        margin: 0 auto;
+    }
+}

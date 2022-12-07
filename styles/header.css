@@ -1,0 +1,60 @@
+header{
+    width: 100%;
+    background: var(--primary);
+}
+.navbar-hero{
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-description{
+    margin-top: 1.7%;
+    font-family: var(--footerPolicy);
+    color: var(--fontWhite);
+}
+
+.nav-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-family: var(--subtitle);
+}
+.nav-options a{
+    color: var(--fontWhite);
+    text-decoration: none;
+}
+.nav-options a:hover{
+    color: var(--secondary);
+    transform: scale(1);
+    transition: all .5s;
+}
+.nav-options li{
+    list-style: none;
+}
+
+.nav-options li:nth-child(1) a{
+    color: var(--secondary);
+}
+
+@media screen and (max-width:480px){
+    .nav-options,
+    .navbar-hero{
+        flex-direction: column;
+    }
+    .navbar-hero{
+        justify-content: center;
+        gap: 30px;
+    }
+}

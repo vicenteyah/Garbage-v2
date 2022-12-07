@@ -1,0 +1,187 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" 
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" 
+    crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="./js/responsiveslides.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/slider.css">
+    <link rel="stylesheet" href="./styles/sectionJunk.css">
+    <link rel="stylesheet" href="./styles/sectionOurTeam.css">
+    <link rel="stylesheet" href="./styles/sectionContact.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/responsiveslides.css">
+    <link rel="stylesheet" href="./styles/sectionCarousel.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <!-- <link rel="stylesheet" href="./styles/demo.css"> -->
+    <title>Garbage settings</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+           <nav class="navbar navbar-hero">
+                <div class="navbar-logo">
+                    <figure>
+                        <img src="./images/invert-logo.png" alt="logo">
+                    </figure>
+                    <span class="logo-description">Removal Service</span>
+                </div>
+                <ul class="nav-options">
+                    <li v-for="(item, index) in navItems">
+                        <a href="#">{{ item.name }}</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                </ul>
+           </nav>
+        </header>
+
+        <section id="wrapper" class="slider-hidden">
+            <div class="callbacks_container">
+                <ul class="rslides content" id="slider4">
+                    <li v-for="(slide,index) in slider">
+                        <img :src="slider[index].path" :alt="slider[index].alt">
+                        <article class="caption">
+                            <h1>{{ sliderArticle.title }}</h1>
+                            <h3>{{ sliderArticle.subtitle }}</h3>
+                            <a href="#" class="open">{{ sliderArticle.buttonTitle }}</a>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section junk-removal">
+            <div class="junk-layout">
+                <h1>Full service junk removal</h1>
+                <p>
+                    Book removal for your home or bussines, including officess, retail locations,
+                    construction sites and more. <br>
+                    Our friendly team is happy to meet all of your junk haulling needs.
+                </p>
+
+                <div class="junk-articles-layout">
+                    <article class="junk-article" v-for="(junk, index) in junks">
+                        <img :src="junks[index].path" :alt="junks[index].alt">
+                        <div class="junk-description">
+                            <h1>{{ junk.title }}</h1>
+                            <p>
+                                {{ junk.description }}
+                            </p>
+                            <a href="#"  class="open">{{ junk.btn }}</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="background-wrapper">
+            <div class="section team-layout">
+                <article class="team-article" v-for="(team, index) in teams">
+                    <h1>{{ team.title }}</h1>
+                    <figure>
+                        <img :src="teams[index].path" :alt="teams[index].alt">
+                    </figure>
+                    <p> {{ team.description }} </p>
+
+                    <a href="#"  class="open">
+                        {{ team.btn }}
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="carousel-wrapper">
+            <h1 class="carousel-title">What People Think About Us</h1>
+            <div class="carousel-hero">
+                <input type="radio" name="position" checked />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <main id="carousel">
+                  <article class="item" v-for="(feed, index) in feedbacks">
+                    <div class="item-header">
+                        <figure>
+                            <img :src="feedbacks[index].path" :alt="feedbacks[index].alt">
+                        </figure>
+                        <div class="item-header-description">
+                            <h1> {{ feed.name }}</h1>
+                            <p>{{ feed.ocuppation }}</p>
+                        </div>
+                    </div>
+                    <p> {{ feed.description }}</p>
+                  </article>
+                <main>
+            </div>
+        </section>
+
+        <section class="contact-wrapper">
+            <div class="section contact-layout">
+                <article class="contact-info" v-for="(contact,index) in contacts">
+                    <span class="contact-icon">
+                        <i :class="contacts[index].icon"></i>
+                    </span>
+                    <div class="contact-details">
+                        <label>{{ contact.title }}</label>
+                        <span>{{ contact.description }}</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Modal logic-->
+        <div class="overlay"></div>
+        <div class="modal">
+            <form class="form">
+                <h2>Want to Receive the hottest news?</h2>
+                <label>Subscribe us to keep up-to-date!</label>
+                <iframe
+                    width="350"
+                    height="170"
+                    src="https://www.youtube.com/embed/WxdvthnuznA"
+                    frameborder="0"
+                    allowfullscreen
+                ></iframe> 
+                <div class="form-control">
+                    <input type="text" class="form-input" placeholder="Your email">
+                    <button class="form-button">SUBSCRIBE</button>
+                    <button class="close form-button">Close</button>  
+                </div>
+            </form>
+        </div>
+
+        <footer class="footer-wrapper">
+            <div class="section footer-layout">
+                <div class="footer-title">
+                    <label>Randy Gutierrez@All Right reserved</label>
+                </div>
+                <div class="footer-social">
+                    <a href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
