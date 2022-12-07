@@ -54,7 +54,7 @@ createApp({
             junks:[
                 {
                     id:1,
-                    path:'/images/junk1.jpg',
+                    path:'./images/junk1.jpg',
                     alt:'junk1',
                     title: 'Trash Removal',
                     description:`
@@ -65,7 +65,7 @@ createApp({
                 },
                 {
                     id:2,
-                    path:'/images/junk2.jpg',
+                    path:'./images/junk2.jpg',
                     alt:'junk2',
                     title: 'Junk Removal',
                     description:`
@@ -76,7 +76,7 @@ createApp({
                 },
                 {
                     id:3,
-                    path:'/images/junk3.jpg',
+                    path:'./images/junk3.jpg',
                     alt:'junk3',
                     title: 'Recycle',
                     description:`
@@ -92,7 +92,7 @@ createApp({
                 {
                     id:1,
                     title: 'Our Team',
-                    path:'/images/home-4-1.jpg',
+                    path:'./images/home-4-1.jpg',
                     alt:'home1',
                     description:`
                         Our team consists of people who care about environment and cleanliness. 
@@ -103,7 +103,7 @@ createApp({
                 {
                     id:2,
                     title: 'What we take',
-                    path:'/images/home-5.jpg',
+                    path:'./images/home-5.jpg',
                     alt:'home2',
                     description:`
                         We collect paper, plastic, beverage cartons, white and colored glass,
@@ -114,7 +114,7 @@ createApp({
                 {
                     id:3,
                     title: 'Towns we serve',
-                    path:'/images/home-6.jpg',
+                    path:'./images/home-6.jpg',
                     alt:'home3',
                     description:`
                         We work all over Glasgow area, and also we serve such regions 
@@ -128,7 +128,7 @@ createApp({
                     id:1,
                     name: 'Michael Sellers',
                     ocuppation: 'Teacher',
-                    path:'/images/gravatars/avatar1.jpg',
+                    path:'./images/gravatars/avatar1.jpg',
                     alt:'avatar1',
                     description:`
                         Thanks to JohnnyGo's team my house is now as good as new! They helped me to renew my roof, 
@@ -140,7 +140,7 @@ createApp({
                     id:2,
                     name: 'Daniel Gleber',
                     ocuppation: 'Mathematician',
-                    path:'/images/gravatars/avatar2.jpg',
+                    path:'./images/gravatars/avatar2.jpg',
                     alt:'avatar2',
                     description:`
                         Thanks to JohnnyGo's team my house is now as good as new! They helped me to renew my roof, 
@@ -152,7 +152,7 @@ createApp({
                     id:3,
                     name: 'Vladimir Makarov',
                     ocuppation: 'Engineer',
-                    path:'/images/gravatars/avatar3.jpg',
+                    path:'./images/gravatars/avatar3.jpg',
                     alt:'avatar3',
                     description:`
                         Thanks to JohnnyGo's team my house is now as good as new! They helped me to renew my roof, 
